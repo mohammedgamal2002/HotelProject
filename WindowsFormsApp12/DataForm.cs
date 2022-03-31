@@ -10,20 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp12
 {
-    public class Customer
-    {
-        public string name { get; set; }
-        public string address { get; set; }
-        public string phoneNum { get; set; }
-        public string roomNum { get; set; } 
-        public Customer(string name, string address, string phoneNum, string roomNum) {
-            this.name = name;
-            this.address = address;
-            this.phoneNum = phoneNum;
-            this.roomNum = roomNum;
-        }
 
-    }
     public partial class DataForm : Form
     {
         List<Customer> customersList = new List<Customer>(); // Customers File Should read into this list
@@ -35,11 +22,25 @@ namespace WindowsFormsApp12
 
             foreach (Customer customer in customersList)
             {
-                dataGridView1.Rows.Add(customer.name,customer.address , customer.phoneNum , customer.roomNum);
+                dataGridView1.Rows.Add(customer.name,customer.address , customer.phoneNum , customer.roomNum); // puts Customers info in the Grid view
             }
         }
     }
 
+    public class Customer
+    {
+        public string name { get; set; }
+        public string address { get; set; }
+        public string phoneNum { get; set; }
+        public string roomNum { get; set; }
+        public Customer(string name, string address, string phoneNum, string roomNum)
+        {
+            this.name = name;
+            this.address = address;
+            this.phoneNum = phoneNum;
+            this.roomNum = roomNum;
+        }
 
+    }
 
 }
