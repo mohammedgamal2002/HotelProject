@@ -35,6 +35,8 @@
             this.PhoneCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +58,14 @@
             this.PhoneCol,
             this.roomType,
             this.roomNum});
-            this.dataGridView1.Location = new System.Drawing.Point(50, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 26);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(753, 447);
             this.dataGridView1.TabIndex = 0;
             // 
             // NameCol
@@ -87,11 +88,31 @@
             this.roomNum.HeaderText = "Room Number";
             this.roomNum.Name = "roomNum";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(164, 498);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(177, 55);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(464, 498);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(177, 55);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Refresh";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(856, 574);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DataForm";
             this.Text = "DataForm";
@@ -107,5 +128,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomType;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomNum;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

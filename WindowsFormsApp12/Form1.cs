@@ -17,6 +17,7 @@ namespace WindowsFormsApp12
         bool mouseDown;
         private Point offset;
         private RoomForm roomForm;
+        private DataForm dataForm;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -83,10 +84,6 @@ namespace WindowsFormsApp12
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void roomButton_Click(object sender, EventArgs e)
-        {
-            roomForm.Show();
-        }
 
         private void MakeRoomForm()
         {
@@ -100,9 +97,35 @@ namespace WindowsFormsApp12
 
         }
 
+        private void MakeDataForm()
+        {
+            dataForm = new DataForm();
+            dataForm.TopLevel = false;
+            childFormPanel.Controls.Add(dataForm);
+            dataForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            dataForm.Size = childFormPanel.Size;
+            dataForm.Dock = DockStyle.Fill;
+
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             MakeRoomForm();
+            MakeDataForm();
+            
+        }
+
+        private void roomButton_Click(object sender, EventArgs e)
+        {
+            dataForm.Hide();
+            roomForm.Show();
+        }
+        private void usersButton_Click(object sender, EventArgs e)
+        {
+            roomForm.Hide();
+            dataForm.Show();
+
         }
     }
 }

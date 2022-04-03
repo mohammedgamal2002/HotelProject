@@ -38,7 +38,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.usersButton = new FontAwesome.Sharp.IconButton();
             this.roomButton = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -158,7 +158,7 @@
             // 
             this.panel6.Controls.Add(this.iconButton9);
             this.panel6.Controls.Add(this.iconButton8);
-            this.panel6.Controls.Add(this.iconButton7);
+            this.panel6.Controls.Add(this.usersButton);
             this.panel6.Controls.Add(this.roomButton);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(69, 0);
@@ -199,21 +199,24 @@
             this.iconButton8.Text = "iconButton8";
             this.iconButton8.UseVisualStyleBackColor = false;
             // 
-            // iconButton7
+            // usersButton
             // 
-            this.iconButton7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(144)))), ((int)(((byte)(212)))));
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton7.IconColor = System.Drawing.Color.Black;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(5, 69);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(99, 39);
-            this.iconButton7.TabIndex = 1;
-            this.iconButton7.Text = "iconButton7";
-            this.iconButton7.UseVisualStyleBackColor = false;
+            this.usersButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.usersButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usersButton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(144)))), ((int)(((byte)(212)))));
+            this.usersButton.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.usersButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.usersButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.usersButton.IconSize = 25;
+            this.usersButton.Location = new System.Drawing.Point(5, 69);
+            this.usersButton.Name = "usersButton";
+            this.usersButton.Size = new System.Drawing.Size(99, 39);
+            this.usersButton.TabIndex = 1;
+            this.usersButton.Text = "Users";
+            this.usersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.usersButton.UseVisualStyleBackColor = false;
+            this.usersButton.Click += new System.EventHandler(this.usersButton_Click);
             // 
             // roomButton
             // 
@@ -331,7 +334,7 @@
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton iconButton9;
         private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton usersButton;
         private FontAwesome.Sharp.IconButton roomButton;
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton iconButton5;
