@@ -19,10 +19,9 @@ namespace WindowsFormsApp12
             InitializeComponent();
             customersList.Add(new Customer("Ahmed", "23 St asdas", "010321030", "22"));             //test case
             customersList.Add(new Customer("mohammed", "23 St asdas", "010321030", "62"));            //test case
-
             foreach (Customer customer in customersList)
             {
-                dataGridView1.Rows.Add(customer.name,customer.address , customer.phoneNum , customer.roomNum); // puts Customers info in the Grid view
+                dataGridView1.Rows.Add(customer.name, customer.address, customer.phoneNum, customer.roomNum); // puts Customers info in the Grid view
             }
         }
     }
