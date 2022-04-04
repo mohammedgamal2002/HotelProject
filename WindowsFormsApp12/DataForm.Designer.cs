@@ -37,6 +37,7 @@
             this.roomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.emailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.NameCol,
             this.PhoneCol,
             this.roomType,
-            this.roomNum});
+            this.roomNum,
+            this.emailCol});
             this.dataGridView1.Location = new System.Drawing.Point(43, 26);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
@@ -106,6 +108,11 @@
             this.button2.Text = "Refresh";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // emailCol
+            // 
+            this.emailCol.HeaderText = "Email";
+            this.emailCol.Name = "emailCol";
+            // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,5 +137,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roomNum;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailCol;
     }
 }

@@ -29,5 +29,11 @@ namespace WindowsFormsApp12
             mainForm.ShowDialog();
             
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+        }
     }
 }
