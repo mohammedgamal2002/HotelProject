@@ -25,18 +25,29 @@ namespace WindowsFormsApp12
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(@"..\..\Data\Users.txt", true))
+            using (FileStream fs = new FileStream(@"..\..\Data\Users.txt",FileMode.Append,FileAccess.Write))
             {
-                int recordSize = usernameTextBox.TextLength + passwordTextBox.TextLength + emailTextBox.TextLength + phoneNumTextBox.TextLength + 4; // 4 delimiters
-                string userInfo = recordSize.ToString() + "|"
-                                + usernameTextBox.Text + "|"
-                                + passwordTextBox.Text + "|"
-                                + emailTextBox.Text + "|"
-                                + phoneNumTextBox.Text
-                    ;
-                writer.WriteLine(userInfo);
+                MessageBox.Show(fs.Position.ToString());
+                using (StreamWriter writer = new StreamWriter(@"..\..\Data\Index.txt", true))
+                {
+                    string indexRecord = usernameTextBox.Text + "|" + fs.Position.ToString(); 
+                    writer.WriteLine(indexRecord);
+                }
+            
+                using (StreamWriter writer = new StreamWriter(fs))
+                {
+                    //int recordSize = usernameTextBox.TextLength + passwordTextBox.TextLength + emailTextBox.TextLength + phoneNumTextBox.TextLength + 4; // 4 delimiters
+                    string state = " ";
+                    string userInfo = state + "|"
+                                    + usernameTextBox.Text + "|"
+                                    + passwordTextBox.Text + "|"
+                                    + emailTextBox.Text + "|"
+                                    + phoneNumTextBox.Text
+                        ;
+                    writer.WriteLine(userInfo);
 
 
+                }
             }
         }
     }

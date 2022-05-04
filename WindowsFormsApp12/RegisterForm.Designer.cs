@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.RegisterButton = new CustomControls.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,32 +49,12 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.RegisterButton = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // RegisterButton
-            // 
-            this.RegisterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.RegisterButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.RegisterButton.BorderColor = System.Drawing.Color.White;
-            this.RegisterButton.BorderRadius = 20;
-            this.RegisterButton.BorderSize = 1;
-            this.RegisterButton.FlatAppearance.BorderSize = 0;
-            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterButton.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButton.ForeColor = System.Drawing.Color.White;
-            this.RegisterButton.Location = new System.Drawing.Point(537, 276);
-            this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(150, 40);
-            this.RegisterButton.TabIndex = 10;
-            this.RegisterButton.Text = "Register";
-            this.RegisterButton.TextColor = System.Drawing.Color.White;
-            this.RegisterButton.UseVisualStyleBackColor = false;
-            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // panel6
             // 
@@ -302,6 +281,27 @@
             this.label6.Size = new System.Drawing.Size(230, 73);
             this.label6.TabIndex = 48;
             this.label6.Text = "Hottell";
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RegisterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.RegisterButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.RegisterButton.BorderColor = System.Drawing.Color.White;
+            this.RegisterButton.BorderRadius = 20;
+            this.RegisterButton.BorderSize = 1;
+            this.RegisterButton.FlatAppearance.BorderSize = 0;
+            this.RegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterButton.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.ForeColor = System.Drawing.Color.White;
+            this.RegisterButton.Location = new System.Drawing.Point(534, 276);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(150, 40);
+            this.RegisterButton.TabIndex = 10;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.TextColor = System.Drawing.Color.White;
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // RegisterForm
             // 

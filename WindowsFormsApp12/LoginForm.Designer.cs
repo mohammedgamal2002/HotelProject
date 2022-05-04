@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userLoginTextBox = new System.Windows.Forms.TextBox();
+            this.passLoginTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.userIcon = new FontAwesome.Sharp.IconPictureBox();
@@ -40,21 +40,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // userLoginTextBox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(118, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 20);
-            this.textBox1.TabIndex = 4;
+            this.userLoginTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userLoginTextBox.Location = new System.Drawing.Point(118, 70);
+            this.userLoginTextBox.Name = "userLoginTextBox";
+            this.userLoginTextBox.Size = new System.Drawing.Size(174, 20);
+            this.userLoginTextBox.TabIndex = 4;
             // 
-            // textBox2
+            // passLoginTextBox
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(118, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 5;
+            this.passLoginTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.passLoginTextBox.Location = new System.Drawing.Point(118, 184);
+            this.passLoginTextBox.Name = "passLoginTextBox";
+            this.passLoginTextBox.Size = new System.Drawing.Size(174, 20);
+            this.passLoginTextBox.TabIndex = 5;
             // 
             // panel1
             // 
@@ -154,8 +154,8 @@
             this.Controls.Add(this.userIcon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passLoginTextBox);
+            this.Controls.Add(this.userLoginTextBox);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Name = "LoginForm";
@@ -172,8 +172,8 @@
 
         private CustomControls.RJControls.RJButton loginButton;
         private CustomControls.RJControls.RJButton registerButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userLoginTextBox;
+        private System.Windows.Forms.TextBox passLoginTextBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox userIcon;

@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.emailCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.compactButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,14 +45,14 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameCol,
@@ -62,11 +62,11 @@
             this.emailCol});
             this.dataGridView1.Location = new System.Drawing.Point(43, 26);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.Size = new System.Drawing.Size(753, 447);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -90,39 +90,42 @@
             this.roomNum.HeaderText = "Room Number";
             this.roomNum.Name = "roomNum";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(164, 498);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(464, 498);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // emailCol
             // 
             this.emailCol.HeaderText = "Email";
             this.emailCol.Name = "emailCol";
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(135, 498);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(177, 55);
+            this.deleteButton.TabIndex = 1;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // compactButton
+            // 
+            this.compactButton.Location = new System.Drawing.Point(418, 498);
+            this.compactButton.Name = "compactButton";
+            this.compactButton.Size = new System.Drawing.Size(177, 55);
+            this.compactButton.TabIndex = 2;
+            this.compactButton.Text = "Compact";
+            this.compactButton.UseVisualStyleBackColor = true;
+            this.compactButton.Click += new System.EventHandler(this.compactButton_Click);
             // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 574);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.compactButton);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "DataForm";
             this.Text = "DataForm";
+            this.Load += new System.EventHandler(this.DataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,8 +138,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomType;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomNum;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button compactButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailCol;
     }
 }
