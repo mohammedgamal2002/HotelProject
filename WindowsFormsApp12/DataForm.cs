@@ -21,9 +21,15 @@ namespace WindowsFormsApp12
         List<Customer> compactionList = new List<Customer>();
         public DataForm()
         {
-            ReadUsersFile();
             InitializeComponent();
 
+            ReadUsersFile();
+            LoadCustomerList();
+
+
+        }
+        private void LoadCustomerList() {
+            dataGridView1.Rows.Clear();
             foreach (Customer customer in customersList)
             {
                 if (customer.isDeleted == false)
@@ -33,7 +39,18 @@ namespace WindowsFormsApp12
                 }
             }
         }
-
+        private void ReadIndexFile() {
+            using (StreamReader reader = new StreamReader(@"..\..\Data\Index.txt"))
+            {
+                string line;
+                string[] parts = new string[2];
+                while ((line = reader.ReadLine()) != null)
+                {
+                    parts = line.Split('|');
+                    indexDictionary.Add(parts[0], parts[1]);
+                }
+            }
+        }
         private void ReadUsersFile()
         {
             using (StreamReader reader = new StreamReader(@"..\..\Data\Users.txt"))
@@ -71,7 +88,6 @@ namespace WindowsFormsApp12
             if (indexDictionary.ContainsKey(username))
             {
                 indexDictionary.TryGetValue(username, out position);
-                MessageBox.Show(position);
                 using (FileStream fs = new FileStream(@"..\..\Data\Users.txt", FileMode.OpenOrCreate, FileAccess.Write))
                 {
                     fs.Position = long.Parse(position);
@@ -80,6 +96,7 @@ namespace WindowsFormsApp12
                         sw.Write('*');
                     }
                 }
+                dataGridView1.Rows[index].
 
             }
 
@@ -87,20 +104,21 @@ namespace WindowsFormsApp12
 
         private void DataForm_Load(object sender, EventArgs e)
         {
-            using (StreamReader reader = new StreamReader(@"..\..\Data\Index.txt"))
-            {
-                string line;
-                string[] parts = new string[2];
-                while ((line = reader.ReadLine()) != null)
-                {
-                    parts = line.Split('|');
-                    indexDictionary.Add(parts[0], parts[1]);
-                }
-            }
+            ReadIndexFile();
         }
-
+        private void RefreshList() {
+            indexDictionary.Clear();
+            customersList.Clear();
+            dataGridView1.Rows.Clear();
+            ReadUsersFile();
+            ReadIndexFile();
+            LoadCustomerList();
+        }
         private void compactButton_Click(object sender, EventArgs e)
         {
+
+            RefreshList();
+
             File.Delete(@"..\..\Data\Users.txt");
             File.Delete(@"..\..\Data\Index.txt");
             foreach (Customer customer in customersList)
