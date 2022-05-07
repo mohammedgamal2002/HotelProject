@@ -96,7 +96,6 @@ namespace WindowsFormsApp12
                         sw.Write('*');
                     }
                 }
-                dataGridView1.Rows[index].
 
             }
 
