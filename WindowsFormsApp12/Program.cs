@@ -16,7 +16,7 @@ namespace WindowsFormsApp12
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DataForm());
+            Application.Run(new LoginForm());
         }
     }
 }
