@@ -80,7 +80,7 @@ namespace WindowsFormsApp12
             DataGridViewSelectedRowCollection deletedRecord = dataGridView1.SelectedRows;
             int index = deletedRecord[0].Index;
             string username = deletedRecord[0].Cells[0].Value.ToString();
-            MessageBox.Show(username);
+            //MessageBox.Show(username);
             string position = null;
 
 

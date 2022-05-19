@@ -67,12 +67,13 @@ namespace WindowsFormsApp12
                 }
 
             }
-            //MessageBox.Show(position);
 
             if (passLoginTextBox.Text == password)
             {
+                this.Hide();
                 Form1 mainForm = new Form1();
                 mainForm.ShowDialog();
+                this.Close();
             }
             else
             {

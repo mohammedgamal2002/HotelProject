@@ -28,7 +28,7 @@ namespace WindowsFormsApp12
             bool HasRegisterd = false;
             using (FileStream fs = new FileStream(@"..\..\Data\Users.txt",FileMode.Append,FileAccess.Write))
             {
-                MessageBox.Show(fs.Position.ToString());
+                //MessageBox.Show(fs.Position.ToString());
                 using (StreamWriter writer = new StreamWriter(@"..\..\Data\Index.txt", true))
                 {
                     string indexRecord = usernameTextBox.Text + "|" + fs.Position.ToString(); 
