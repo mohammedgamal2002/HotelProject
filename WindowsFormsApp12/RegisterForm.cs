@@ -25,6 +25,7 @@ namespace WindowsFormsApp12
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            bool HasRegisterd = false;
             using (FileStream fs = new FileStream(@"..\..\Data\Users.txt",FileMode.Append,FileAccess.Write))
             {
                 MessageBox.Show(fs.Position.ToString());
@@ -46,7 +47,15 @@ namespace WindowsFormsApp12
                         ;
                     writer.WriteLine(userInfo);
 
+                    HasRegisterd = true;
 
+                }
+                if (HasRegisterd)
+                {
+                    this.Hide();
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.ShowDialog();
+                    this.Close();
                 }
             }
         }

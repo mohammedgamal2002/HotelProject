@@ -67,7 +67,7 @@ namespace WindowsFormsApp12
                 }
 
             }
-            MessageBox.Show(position);
+            //MessageBox.Show(position);
 
             if (passLoginTextBox.Text == password)
             {
@@ -85,7 +85,9 @@ namespace WindowsFormsApp12
         private void registerButton_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
+            this.Hide();
             registerForm.ShowDialog();
+            this.Close();
         }
     }
 }
