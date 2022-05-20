@@ -1,4 +1,2 @@
-Mo|0
-ahmed|40
-aa|84
-New|108
+mo|0
+asd|22

@@ -52,9 +52,6 @@
     <Compile Include="AddRoomForm.Designer.cs">
       <DependentUpon>AddRoomForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButtonZ.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DataForm.cs">
       <SubType>Form</SubType>
     </Compile>
