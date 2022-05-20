@@ -30,7 +30,7 @@ namespace WindowsFormsApp12
             int nHeightEllipse // height of ellipse
         );
 
-        public Form1()
+        public Form1(bool isAdmin)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
@@ -40,7 +40,10 @@ namespace WindowsFormsApp12
             Point panelLocation = panel1.Location;
             Size panelSize = panel1.Size;
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(panelLocation.X, panelLocation.Y, panelSize.Width, panelSize.Height, 10, 10));
-            
+            if (isAdmin)
+            {
+                usersButton.Visible = true;
+            }
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

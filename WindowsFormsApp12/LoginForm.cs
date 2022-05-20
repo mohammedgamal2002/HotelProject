@@ -40,10 +40,17 @@ namespace WindowsFormsApp12
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+
             string userName = userLoginTextBox.Text;
             string position = null;
             string password = null;
-
+            if (userName == "admin" && passLoginTextBox.Text == "admin")
+            {
+                this.Hide();
+                Form1 mainForm = new Form1(true);
+                mainForm.ShowDialog();
+                this.Close();
+            }
 
 
             if (indexDictionary.ContainsKey(userName))
@@ -71,7 +78,7 @@ namespace WindowsFormsApp12
             if (passLoginTextBox.Text == password)
             {
                 this.Hide();
-                Form1 mainForm = new Form1();
+                Form1 mainForm = new Form1(false);
                 mainForm.ShowDialog();
                 this.Close();
             }

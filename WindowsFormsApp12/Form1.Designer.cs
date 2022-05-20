@@ -173,6 +173,7 @@
             this.usersButton.Text = "Users";
             this.usersButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.usersButton.UseVisualStyleBackColor = false;
+            this.usersButton.Visible = false;
             this.usersButton.Click += new System.EventHandler(this.usersButton_Click);
             // 
             // roomButton
